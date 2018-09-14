@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>App.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">pa-app</a> &gt; <a href="index.source.html" class="el_package">pa.app</a> &gt; <span class="el_source">App.java</span></div><h1>App.java</h1><pre class="source lang-java linenums"> package pa.app;
+
+import java.util.Scanner;
+import java.util.logging.Logger;
+
+<span class="fc" id="L6">public class App </span>
+{
+<span class="fc" id="L8">	private static Logger logger = Logger.getLogger(App.class.getName());</span>
+	
+	
+
+    public static void main (String args[]){ 
+      
+<span class="nc" id="L14">        int opcao = 5;  </span>
+        int num1;  
+        int num2;  
+<span class="nc" id="L17">		Scanner input = new Scanner(System.in);</span>
+<span class="nc" id="L18">		logger.info(&quot;-Escolha uma opcao-&quot;);  </span>
+<span class="nc" id="L19">		logger.info(&quot;1. Soma&quot;);    </span>
+<span class="nc" id="L20">		logger.info(&quot;2. Subtracao&quot;);    </span>
+<span class="nc" id="L21">		logger.info(&quot;3. Multiplicacao&quot;);    </span>
+<span class="nc" id="L22">		logger.info(&quot;4. Divisao&quot;);    </span>
+<span class="nc" id="L23">        System.out.println(&quot;0. Sair&quot;);    </span>
+<span class="nc" id="L24">        System.out.println(&quot;Operacao: &quot;);    </span>
+<span class="nc" id="L25">        opcao = input.nextInt();  </span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">        while (opcao != 0) {</span>
+<span class="nc" id="L27">			Scanner input1 = new Scanner(System.in);    </span>
+<span class="nc" id="L28">			logger.info(&quot;Qual o primeiro numero: &quot;);  </span>
+<span class="nc" id="L29">			num1 = input1.nextInt();  </span>
+<span class="nc" id="L30">			logger.info(&quot;Qual o segundo numero: &quot;);  </span>
+<span class="nc" id="L31">			num2 = input1.nextInt();</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">			if ( opcao == 1 ) {</span>
+<span class="nc" id="L33">				int operacao = som(num1, num2);</span>
+<span class="nc" id="L34">                System.out.printf(&quot;\nO resultado da soma é: %d\n&quot;, operacao);  </span>
+<span class="nc" id="L35">                break;  </span>
+            }  
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            else if (opcao == 2) { </span>
+<span class="nc" id="L38">				int operacao = sub(num1, num2);</span>
+<span class="nc" id="L39">				System.out.printf(&quot;\nO resultado da subtracao é: %d\n&quot;, operacao);  </span>
+<span class="nc" id="L40">				break;  </span>
+			}  
+<span class="nc bnc" id="L42" title="All 2 branches missed.">			else if (opcao == 3) {</span>
+<span class="nc" id="L43">				int operacao = mult(num1, num2); </span>
+<span class="nc" id="L44">				System.out.printf(&quot;\nO resultado da multiplicacao é: %d\n&quot;, operacao);    </span>
+<span class="nc" id="L45">				break;  </span>
+			}  
+<span class="nc bnc" id="L47" title="All 2 branches missed.">			else if (opcao == 4) {  </span>
+<span class="nc" id="L48">				int operacao = div(num1, num2);  </span>
+<span class="nc" id="L49">				System.out.printf(&quot;\nO resultado da divisao é: %d\n&quot;, operacao);   </span>
+<span class="nc" id="L50">				break;  </span>
+			}  
+			else{  
+<span class="nc" id="L53">				System.out.println(&quot;????&quot;);  </span>
+<span class="nc" id="L54">				break;  </span>
+			}      
+        } 
+<span class="nc" id="L57">    }  </span>
+
+      
+    public static int som(int num1, int num2) {
+<span class="fc" id="L61">        return num1 + num2;</span>
+    }  
+    public static int sub(int num1, int num2){
+<span class="fc" id="L64">        return num1 - num2;</span>
+    }  
+    public static int div(int num1,int num2){
+<span class="fc" id="L67">        return num1 / num2;</span>
+    }  
+    public static int mult(int num1, int num2){
+<span class="fc" id="L70">        return num1 * num2;</span>
+    }  
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.8.201612092310</span></div></body></html>

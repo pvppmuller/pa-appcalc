@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pa.app.AppTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.042 sec <<< FAILURE! - in pa.app.AppTest
-testSub  Time elapsed: 0.021 sec  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
-	at pa.app.AppTest.testSub(AppTest.java:32)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec - in pa.app.AppTest
