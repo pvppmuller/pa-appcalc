@@ -28,7 +28,7 @@ class AppTest {
 		int x = 1;
 		int y = 5;
 		
-		int sub = y-x;
+		int sub = x-y;
 		assertTrue(a.sub(x,y)==(sub));
 	}
 
